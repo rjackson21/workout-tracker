@@ -1,0 +1,14 @@
+<h1>Workouts#index</h1>
+
+<%= form_with model: Workout.new do |form| %>
+  <%= form.label :workout_type %>
+  <%= form.text_field :workout_type %>
+
+  <%= form.label :duration %>
+  <%= form.text_field :duration %>
+
+  <%= form.label :date %>
+  <%= form.datetime_field :date %>
+
+  <%= form.submit "Add Workout" %>
+<% end %>
