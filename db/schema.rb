@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_06_013748) do
+ActiveRecord::Schema.define(version: 2022_01_06_024343) do
 
   create_table "workouts", force: :cascade do |t|
     t.string "workout_type"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2022_01_06_013748) do
     t.datetime "date", precision: 6
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "day_of_week"
   end
 
 end
