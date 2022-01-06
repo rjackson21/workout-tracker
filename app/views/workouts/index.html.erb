@@ -12,3 +12,24 @@
 
   <%= form.submit "Add Workout" %>
 <% end %>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Workout</th>
+      <th scope="col">Duration</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @workouts.each do |workout| %>
+    <tr>
+      <td><%= workout.workout_type.capitalize %></td>
+      <td><%= workout.duration %></td>
+      <td><%= workout.date %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
