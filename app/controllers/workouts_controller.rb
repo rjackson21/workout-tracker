@@ -1,10 +1,12 @@
 class WorkoutsController < ApplicationController
   def index
     @workouts = Workout.all
+    
   end
 
   def create
     workout = Workout.new(workout_params)
+    
 
     if workout.save
       redirect_back fallback_location: root_path
