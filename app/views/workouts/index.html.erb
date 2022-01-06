@@ -20,6 +20,7 @@
       <th scope="col">Workout</th>
       <th scope="col">Duration</th>
       <th scope="col">Date</th>
+      <th scope="col">Day</th>
     </tr>
   </thead>
   <tbody>
@@ -28,6 +29,7 @@
       <td><%= workout.workout_type.capitalize %></td>
       <td><%= workout.duration %></td>
       <td><%= workout.date %></td>
+      <td><%= workout.day_of_week %></td>
     </tr>
     <% end %>
   </tbody>
