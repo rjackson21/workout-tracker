@@ -4,4 +4,8 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+Category.create(name: "Cardio")
+Category.create(name: "Mindfulness")
+Category.create(name: "Weightlifting")
+
+Workout.create(workout_type:"Yoga", duration:60, category_id:2)
