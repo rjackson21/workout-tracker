@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root "workouts#index"
+  root to: 'pages#home'
 
   resources :workouts
   resources :category
