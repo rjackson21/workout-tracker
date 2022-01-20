@@ -30,7 +30,7 @@
     <tr>
       <td><%= workout.workout_type.capitalize %></td>
       <td><%= workout.duration %></td>
-      <td><%= link_to workout.category.name, "/category/#{@category}" %></td>
+      <td><%= link_to workout.category.name , workout.category %></td>
     </tr>
     <% end %>
   </tbody>
