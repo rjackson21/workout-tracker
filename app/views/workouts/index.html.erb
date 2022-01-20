@@ -7,6 +7,9 @@
   <%= form.label :duration %>
   <%= form.text_field :duration %>
 
+  <%= form.label :category_id %>
+  <%= form.collection_select :category_id, Category.all, :id, :name %>
+
   <%= form.label :date %>
   <%= form.datetime_field :date %>
 
