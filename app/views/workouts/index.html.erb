@@ -1,4 +1,4 @@
-<h1>Workouts#index</h1>
+<h1>Workouts</h1>
 
 <%= form_with model: Workout.new do |form| %>
   <%= form.label :workout_type %>
@@ -30,7 +30,7 @@
     <tr>
       <td><%= workout.workout_type.capitalize %></td>
       <td><%= workout.duration %></td>
-      <td><%= workout.category.name %></td>
+      <td><%= link_to workout.category.name, "/category/:id" %></td>
     </tr>
     <% end %>
   </tbody>
