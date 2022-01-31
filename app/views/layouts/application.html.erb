@@ -20,13 +20,17 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="/pages/home">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Profile</a>
+        <a class="nav-item nav-link" href="/users/sign_up">Sign Up</a>
+        <a class="nav-item nav-link" href="/users/sign_in">Sign In</a>
+        <a class="nav-item nav-link" href="/users/sign_out">Sign Out</a>
+        <a class="nav-item nav-link" href="/users/edit">Edit Profile</a>
         <a class="nav-item nav-link" href="/workout/index">Tracking</a>
         <a class="nav-item nav-link" href="/pages/about">About</a>
       </div>
     </div>
     </nav>
-
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
   </head>
 
   <body>
