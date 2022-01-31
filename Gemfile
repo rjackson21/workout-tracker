@@ -72,3 +72,4 @@ group :test do
 end
 
 gem "chartkick"
+gem 'devise', '~> 4.2'
