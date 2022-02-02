@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   get "/pages/about" , to: "pages#about"
   get "/workout/index", to: 'workouts#index'
 
+  devise_scope :user do
+    get "/users/sign_out", to: 'devise/sessions#destroy'
+  end
+
   resources :workouts
   resources :category
+  
   
 end
