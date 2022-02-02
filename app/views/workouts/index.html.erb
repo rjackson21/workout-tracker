@@ -23,6 +23,7 @@
       <th scope="col">Workout</th>
       <th scope="col">Duration</th>
       <th scope="col">Category</th>
+      <th scope="col">Options</th>
     </tr>
   </thead>
   <tbody>
@@ -31,6 +32,7 @@
       <td><%= workout.workout_type.capitalize %></td>
       <td><%= workout.duration %></td>
       <td><%= link_to workout.category.name , workout.category %></td>
+      <td><%= link_to 'Show', workout_path(workout.id)%>
     </tr>
     <% end %>
   </tbody>
