@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root to: 'pages#home'
+
+  resources :workouts
+  resources :category 
+ 
   get "/pages/home", to: "pages#home"
   get "/pages/about" , to: "pages#about"
   get "/workout/index", to: 'workouts#index'
@@ -12,8 +16,7 @@ Rails.application.routes.draw do
     get "/users/sign_out", to: 'devise/sessions#destroy'
   end
 
-  resources :workouts
-  resources :category
+  
   
   
 end
