@@ -30,6 +30,10 @@ class WorkoutsController < ApplicationController
     redirect_to "/workout/index"
   end
 
+  def new
+    @workout = Workout.new
+  end
+
   private
 
   def workout_params

@@ -1,0 +1,18 @@
+<h1> You have reached new. I want this page to be a pop up to quickly add a new workout </h1>
+
+
+<%= form_with model: Workout.new do |form| %>
+  <%= form.label :workout_type %>
+  <%= form.text_field :workout_type %>
+
+  <%= form.label :duration %>
+  <%= form.text_field :duration %>
+
+  <%= form.label :category_id %>
+  <%= form.collection_select :category_id, Category.all, :id, :name %>
+
+  <%= form.label :date %>
+  <%= form.datetime_field :date %>
+
+  <%= form.submit "Add Workout" %>
+<% end %>
