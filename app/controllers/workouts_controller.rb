@@ -16,6 +16,20 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find(params[:id])
   end
 
+  def edit
+    @workout = Workout.find(params[:id])
+    render :edit
+  end
+  
+  def update
+    workout = Workout.find(params[:id])
+    workout.update(workout_params)
+
+    flash[:notice] = "You've successfully updated the workout"
+
+    redirect_to "/workout/index"
+  end
+
   private
 
   def workout_params
