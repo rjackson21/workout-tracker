@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "/pages/home", to: "pages#home"
   get "/pages/about" , to: "pages#about"
   get "/workout/index", to: 'workouts#index'
+  delete "workout/:id", to: 'workouts#destroy'
 
   devise_scope :user do
     get "/users/sign_out", to: 'devise/sessions#destroy'

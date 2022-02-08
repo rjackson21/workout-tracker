@@ -36,7 +36,8 @@
       <td><%= workout.duration %></td>
       <td><%= link_to workout.category.name , workout.category %></td>
       <td><%= link_to 'Show', workout_path(workout.id)%>
-      <%= link_to 'Edit', edit_workout_path(workout.id) %></td>
+      <%= link_to 'Edit', edit_workout_path(workout.id) %>
+      <%= button_to 'Destroy', workout_path(workout.id), method: :delete %></td>
     </tr>
     <% end %>
   </tbody>
