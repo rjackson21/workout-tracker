@@ -29,6 +29,12 @@
       <li class="nav-item">
         <%= link_to "Edit Profile", edit_user_registration_path, class:"nav-link" %>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/workout/index">Tracking</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/workouts/new">Add New Workout</a>
+      </li>
     <% else %>
       <li class="nav-item">
         <a class="nav-link" href="/users/sign_up">Sign Up</a>
@@ -37,12 +43,6 @@
         <%= link_to "Sign In", new_user_session_path, class:"nav-link" %>
       </li>
     <% end %>
-      <li class="nav-item">
-        <a class="nav-link" href="/workouts/new">Add New Workout</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/workout/index">Tracking</a>
-      </li>
       <li class="nav-item">
         <a class="nav-link" href="/pages/about">About</a>
       </li>
