@@ -14,5 +14,8 @@
   <%= form.label :date %>
   <%= form.datetime_field :date %>
 
+  <%= form.label :user_id %>
+  <%= form.number_field :user_id, id: :workout_user_id, value: current_user.id, type: :hidden %>
+
   <%= form.submit "Add Workout" %>
 <% end %>
