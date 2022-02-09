@@ -73,3 +73,4 @@ end
 
 gem "chartkick"
 gem 'devise', '~> 4.2'
+gem 'rails-ujs'

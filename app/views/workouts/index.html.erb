@@ -27,7 +27,6 @@
       <th scope="col">Duration</th>
       <th scope="col">Category</th>
       <th scope="col">Options</th>
-      <th scope="col">User ID</th>
     </tr>
   </thead>
   <tbody>
@@ -39,8 +38,7 @@
       <td><%= link_to workout.category.name , workout.category %></td>
       <td><%= link_to 'Show', workout_path(workout.id)%>
       <%= link_to 'Edit', edit_workout_path(workout.id) %>
-      <%= button_to 'Destroy', workout_path(workout.id), method: :delete %></td>
-      <td><%= workout.user_id %></td>
+      <%= button_to 'Destroy', workout_path(workout.id), method: :delete, remote: true, class: "btn btn-link"%></td>
     </tr>
   <% end %>
     <% end %>
