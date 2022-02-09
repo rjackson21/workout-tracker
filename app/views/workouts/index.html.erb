@@ -27,10 +27,12 @@
       <th scope="col">Duration</th>
       <th scope="col">Category</th>
       <th scope="col">Options</th>
+      <th scope="col">User ID</th>
     </tr>
   </thead>
   <tbody>
   <% @workouts.each do |workout| %>
+  <% if workout.user == current_user %>
     <tr>
       <td><%= workout.workout_type.capitalize %></td>
       <td><%= workout.duration %></td>
@@ -38,7 +40,9 @@
       <td><%= link_to 'Show', workout_path(workout.id)%>
       <%= link_to 'Edit', edit_workout_path(workout.id) %>
       <%= button_to 'Destroy', workout_path(workout.id), method: :delete %></td>
+      <td><%= workout.user_id %></td>
     </tr>
+  <% end %>
     <% end %>
   </tbody>
 </table>
