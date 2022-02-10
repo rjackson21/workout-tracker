@@ -27,6 +27,7 @@
       <th scope="col">Duration</th>
       <th scope="col">Category</th>
       <th scope="col">Options</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -37,8 +38,8 @@
       <td><%= workout.duration %></td>
       <td><%= link_to workout.category.name , workout.category %></td>
       <td><%= link_to 'Show', workout_path(workout.id)%>
-      <%= link_to 'Edit', edit_workout_path(workout.id) %>
-      <%= button_to 'Destroy', workout_path(workout.id), method: :delete, remote: true, class: "btn btn-link"%></td>
+      <%= link_to 'Edit', edit_workout_path(workout.id) %></td>
+      <td><%= button_to 'Delete', workout_path(workout.id), method: :delete, remote: true, class: "btn btn-danger"%></td>
     </tr>
   <% end %>
     <% end %>
