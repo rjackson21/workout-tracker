@@ -8,7 +8,7 @@ class WorkoutsController < ApplicationController
 
   def create
     workout = Workout.new(workout_params)
-
+    
     if workout.save
       redirect_back fallback_location: root_path
     else

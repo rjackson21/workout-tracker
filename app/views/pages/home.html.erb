@@ -2,10 +2,17 @@
     <div class="jumbotron">
         <h1 class="display-4">Welcome to your Workout Tracker</h1>
         <p class="lead">This is a simple, all-in-one app to help keep record of your workouts.</p>
+        <% if user_signed_in? %>
         <hr class="my-4">
         <p>Click below to see your logged workouts.</p>
         <p class="lead">
+        <a class="btn btn-primary btn-lg btn-dark" href="/workout/index" role="button">Track Your Workouts</a>
+        <% else %>
+        <hr class="my-4">
+        <p>Click below to start tracking your workouts.</p>
+        <p class="lead">
         <a class="btn btn-primary btn-lg btn-dark" href="/users/sign_up" role="button">Sign Up</a>
+        <% end %>
         </p>
     </div>
 </div>
