@@ -1,22 +1,25 @@
-<h1>Workouts</h1>
+<h1>Workout Log</h1>
 
 <%= form_with model: Workout.new do |form| %>
+  <form class="form-inline">
+
   <%= form.label :workout_type %>
   <%= form.text_field :workout_type %>
-
+  
+  
   <%= form.label :duration %>
   <%= form.text_field :duration %>
-
+  
   <%= form.label :category_id %>
   <%= form.collection_select :category_id, Category.all, :id, :name %>
 
   <%= form.label :date %>
   <%= form.datetime_field :date %>
 
-  <%= form.label :user_id %>
   <%= form.number_field :user_id, id: :workout_user_id, value: current_user.id, type: :hidden %>
 
-  <%= form.submit "Add Workout" %>
+  <button type = "submit" class = "btn btn-primary mb-2">Submit</button>
+  </form>
 <% end %>
 
 
@@ -46,6 +49,9 @@
   </tbody>
 </table>
 
-<%= pie_chart Workout.group(:workout_type).count %>
+
+<%= pie_chart Workout.group(:duration).count %>
+
+
 
 
