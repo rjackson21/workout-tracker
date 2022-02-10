@@ -1,7 +1,8 @@
 <h1>Workout Log</h1>
 
-<%= form_with model: Workout.new do |form| %>
-  <form class="form-inline">
+
+<%= form_with model: Workout.new, class: "form-inline" do |form| %>
+  
 
   <%= form.label :workout_type %>
   <%= form.text_field :workout_type %>
@@ -19,7 +20,7 @@
   <%= form.number_field :user_id, id: :workout_user_id, value: current_user.id, type: :hidden %>
 
   <button type = "submit" class = "btn btn-primary mb-2">Submit</button>
-  </form>
+
 <% end %>
 
 
@@ -50,7 +51,7 @@
 </table>
 
 
-<%= pie_chart Workout.group(:duration).count %>
+<%= pie_chart current_user.workouts.group(:workout_type).count %>
 
 
 
