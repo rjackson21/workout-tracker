@@ -10,11 +10,13 @@
   </thead>
   <tbody>
   <% @workouts.each do |workout| %>
+  <% if workout.user == current_user %>
     <tr>
       <td><%= workout.category.name%></td>
       <td><%= workout.workout_type %></td>
       <td><%= workout.duration%></td>
     </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
