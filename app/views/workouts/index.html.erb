@@ -51,7 +51,7 @@
 </table>
 
 
-<%= pie_chart current_user.workouts.group(:workout_type).count %>
+<%= pie_chart current_user.workouts.group(:category).sum(:duration) %>
 
 
 

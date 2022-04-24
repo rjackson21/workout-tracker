@@ -92,6 +92,8 @@ GEM
     erubi (1.10.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    groupdate (6.0.1)
+      activesupport (>= 5.2)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.0.1)
@@ -211,6 +213,7 @@ DEPENDENCIES
   chartkick
   debug
   devise (~> 4.2)
+  groupdate
   importmap-rails
   jbuilder
   puma (~> 5.0)
