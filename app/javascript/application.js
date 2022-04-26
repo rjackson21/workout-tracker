@@ -6,3 +6,4 @@ import "Chart.bundle"
 //import "chartkick/chart.js"
 
 
+
