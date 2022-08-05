@@ -1,4 +1,10 @@
 <h1><%=@workout.workout_type%></h1>
+
+<div>
 <%= @workout.duration %>
 <br/>
 <%= @workout.date %>
+</div>
+
+<%= button_to 'Delete', workout_path(@workout.id), method: :delete, remote: true, class: "btn btn-danger"%>
+
