@@ -1,24 +1,15 @@
-# README
+# Workout Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is is a workout tracking app that helps keep track of different workouts. Workout data is displayed for the user as a a table and as a pie chart organized by workout type. This app was styled using Bootstrap, and is deployed at https://rails-workouts.herokuapp.com/. 
 
-Things you may want to cover:
+## Setup
+1. Clone this repository
+2. `cd` into it 
+3. Start the PostgreSQL server (this command may vary depending on how you installed PostgreSQL) brew services start postgresql' and run the migrations `bundle exec rake db:migrate`
+4.Install the dependencies by running `bundle`
+5. Start the Rails server by running `rails server` in the project root
 
-* Ruby version
+The ruby version used is 2.7.0 and rails version 7.0.0
 
-* System dependencies
+The application uses PostgreSQL as its database, so this must be installed.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
