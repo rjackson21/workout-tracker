@@ -14,8 +14,8 @@
  *= require_self
  */
 
- #blah {
-     background-color: gray;
+body {
+     background-image: url(1432676.jpg);
      text-align: center;
      color: whitesmoke
  }
