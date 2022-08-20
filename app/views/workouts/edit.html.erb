@@ -1,8 +1,5 @@
 <p> You are editing <%= @workout.workout_type %></p>
 
-
-
-
 <%= form_for @workout do |f| %>
   <%= f.label 'Workout Type' %><br>
   <%= f.text_field :workout_type %><br>
@@ -13,7 +10,7 @@
   <%= f.label 'Date' %><br>
   <%= f.datetime_field :date %><br>
 
-  <%= f.label 'Category' %><br>
+  <%= f.label 'Category' %>
   <%= f.collection_select :category_id, Category.all, :id, :name %>
 
   <%= f.submit "Update Workout" %>
